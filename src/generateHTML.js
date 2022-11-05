@@ -24,39 +24,39 @@ const generateHTML = (data) => {
                     <div class="col">
                         <div class="card">
                             <div class="card-header">
-                                <h3>name</h3>
+                                <h3>${manager.name}</h3>
                                 <h3> <i class="bi bi-cup-hot-fill"></i> Manager </h3>
                             </div>
                             <div class="card-body">
-                                <p id="id" class="card-text">ID: psh</p>
-                                <p class="card-text">Email: <a id="email" href=#>psh </a></p>
-                                <p id="office" class="card-text">Office number: psh</p>
+                                <p id="id" class="card-text">ID: ${manager.id}</p>
+                                <p class="card-text">Email: <a id="email" href="mailto:${manager.email}">${manager.email} </a></p>
+                                <p id="office" class="card-text">Office number: ${manager.office}</p>
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card">
                             <div class="card-header">
-                                <h3>name</h3>
+                                <h3>${engineer.name}</h3>
                                 <h3> <i class="bi bi-sunglasses"></i> Engineer </h3>
                             </div>
                             <div class="card-body">
-                                <p id="id" class="card-text">ID: psh</p>
-                                <p class="card-text">Email: <a id=" email" href=#>psh</a></p>
-                                <p id="office" class="card-text">GitHub:<a href="#">psh</a></p>
+                                <p id="id" class="card-text">ID: ${engineer.id}</p>
+                                <p class="card-text">Email: <a id=" email" href="mailto:${engineer.email}">${engineer.email}</a></p>
+                                <p id="office" class="card-text">GitHub:<a href="https://github.com/${engineer.github}">${engineer.github}/a></p>
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card">
                             <div class="card-header">
-                                <h3>name</h3>
+                                <h3>${intern.name}</h3>
                                 <h3> <i class="bi bi-file-person"></i> Intern</h3>
                             </div>
                             <div class="card-body">
-                                <p id="id" class="card-text">ID: psh</p>
-                                <p class="card-text">Email: <a id=" email" href=#>psh </a></p>
-                                <p id="office" class="card-text">School: psh</p>
+                                <p id="id" class="card-text">ID: ${intern.id}</p>
+                                <p class="card-text">Email: <a id="email" href="mailto: ${intern.email}">${intern.email} </a></p>
+                                <p id="office" class="card-text">School: ${intern.school}</p>
                             </div>
                         </div>
                     </div>
@@ -68,4 +68,4 @@ const generateHTML = (data) => {
     `;
 };
 
-module.exports = generateHTML;
+export default generateHTML;
