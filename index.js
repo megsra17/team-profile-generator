@@ -1,4 +1,7 @@
 import inquirer from "inquirer";
+import Manager from "./lib/Manager.js";
+import Engineer from "./lib/Engineer.js";
+import Intern from "./lib/Intern.js";
 import generateHTML from "./src/generateHTML.js";
 
 const employeeAswers = [];
@@ -122,7 +125,7 @@ const nextEmployeePrompt = () => {
               employee.email,
               employee.office
             );
-            employees.push(manager);
+            emloyees.push(manager);
             employee;
           } else if (employee.github) {
             const engineer = new Engineer(
@@ -131,7 +134,7 @@ const nextEmployeePrompt = () => {
               employee.email,
               employee.github
             );
-            employees.push(engineer);
+            emloyees.push(engineer);
           } else {
             const intern = new Intern(
               employee.name,
@@ -139,10 +142,11 @@ const nextEmployeePrompt = () => {
               employee.email,
               employee.school
             );
-            employees.push(intern);
+            emloyees.push(intern);
           }
         });
       }
+      generateHTML(employees);
     })
     .catch((error) => console.log(error));
 };

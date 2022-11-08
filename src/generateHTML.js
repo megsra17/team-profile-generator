@@ -1,5 +1,10 @@
+import Engineer from "../lib/Engineer";
+
 const generateHTML = (data) => {
   console.log(data);
+  //loop through employees (map)
+  //return card html for each employee
+  //join html string into one string
 
   return `
         <!DOCTYPE html>
