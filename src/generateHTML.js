@@ -3,14 +3,14 @@ const generateHTML = (data) => {
   const cardsHtml = data
     .map((employee) => {
       let footerHtml;
-      if (employee.type === "manager") {
-        console.log(employee.type);
+      console.log(employee);
+      if (employee.role === "Manager") {
         footerHtml = `
               <p class="card-text">
                 Office number: ${employee.office}
               </p>
             `;
-      } else if (employee.type === "intern") {
+      } else if (employee.role === "Intern") {
         footerHtml = `
           <p class="card-text">
                 School: ${employee.school}
@@ -40,10 +40,6 @@ const generateHTML = (data) => {
       `;
     })
     .join("");
-  console.log(cardsHtml);
-  //loop through employees (map)
-  //return card html for each employee
-  //join html string into one string
 
   return `
         <!DOCTYPE html>
