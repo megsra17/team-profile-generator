@@ -3,6 +3,7 @@ import Manager from "./lib/Manager.js";
 import Engineer from "./lib/Engineer.js";
 import Intern from "./lib/Intern.js";
 import generateHTML from "./src/generateHTML.js";
+import fs from "fs";
 
 const employeeAswers = [];
 
@@ -146,7 +147,14 @@ const nextEmployeePrompt = () => {
           }
         });
       }
-      generateHTML(employees);
+      fs.writeFile("./dist/index.html", generateHTML(emloyees), (error) => {
+        if (error) {
+          console.log(error);
+          return;
+        } else {
+          console.log("File Saved");
+        }
+      });
     })
     .catch((error) => console.log(error));
 };
