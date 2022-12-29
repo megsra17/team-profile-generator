@@ -19,7 +19,7 @@ const generateHTML = (data) => {
       } else {
         footerHtml = `
            <p class="card-text">
-                GitHub: ${employee.github}
+                GitHub: <a href="https://github.com/${employee.github}">${employee.github}</a>
               </p>
           `;
       }
